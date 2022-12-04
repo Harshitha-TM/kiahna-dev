@@ -24,6 +24,10 @@ const homepage = (props) => {
            formData.append("color", melaninMix);
         
             fetch(`${URL}/image`, {
+                headers: {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+  },
               method: 'POST',
               mode:'cors',
               body: formData,
