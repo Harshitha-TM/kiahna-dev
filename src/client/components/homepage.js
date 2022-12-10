@@ -22,7 +22,7 @@ const homepage = (props) => {
             const formData = new FormData();
             formData.append("demo_image", dataFromChild);
            formData.append("color", melaninMix);
-        try(){
+        try{
             fetch(`${URL}image`, {
                 headers: {
     "Content-Type": "application/json",
