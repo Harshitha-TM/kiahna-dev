@@ -37,10 +37,8 @@ const Multer = multer({
     },
 });
 
-app.get("/h",(req,res)=>{
-    res.send("Hello world")
-})
-app.post("/p",(req,res)=>{
+app.post('/p/check', Multer.single('demo_image'), (req, res, next) => {
+    const file = req.body;
     res.status(200).send("Success");
 })
 // app.post('/image', Multer.single('demo_image'), (req, res, next) => {

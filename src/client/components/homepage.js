@@ -23,16 +23,16 @@ const homepage = (props) => {
             formData.append("demo_image", dataFromChild);
             formData.append("color", melaninMix);
             try {
-                fetch(`${URL}/p`, {
+                fetch(`${URL}/p/check`, {
                     method: 'POST',
-                        mode: 'cors',
-                        body: formData,
-                    })
-                        .then((res) => res)
-                        .catch((err) => {
-                            console.log(err.message);
-                        });
-            
+                    mode: 'cors',
+                    body: formData,
+                })
+                    .then((res) => res)
+                    .catch((err) => {
+                        console.log(err.message);
+                    });
+
                 // fetch(`${URL}image`, {
                 //     headers: {
                 //         "Content-Type": "application/json",
@@ -47,11 +47,11 @@ const homepage = (props) => {
                 //         console.log(err.message);
                 //     });
             }
-            catch(err) {
+            catch (err) {
                 console.log("error", err);
             }
         }
-        });
+    });
     return (
         <div className='homepage-section'>
 
