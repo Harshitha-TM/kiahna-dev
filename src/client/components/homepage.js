@@ -23,10 +23,10 @@ const homepage = (props) => {
             formData.append("demo_image", dataFromChild);
             formData.append("color", melaninMix);
             try {
-                fetch(`${URL}p`, {
+                fetch(`${URL}/p`, {
                     method: 'POST',
                         mode: 'cors',
-                        body: "d",
+                        body: formData,
                     })
                         .then((res) => res)
                         .catch((err) => {
