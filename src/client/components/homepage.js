@@ -22,8 +22,8 @@ const homepage = (props) => {
             const formData = new FormData();
             formData.append("demo_image", dataFromChild);
            formData.append("color", melaninMix);
-        
-            fetch(`${URL}/image`, {
+        try(){
+            fetch(`${URL}image`, {
                 headers: {
     "Content-Type": "application/json",
     "Accept": "application/json",
@@ -36,7 +36,10 @@ const homepage = (props) => {
               .catch((err) => {
                 console.log(err.message);
               });
-            }
+            }}
+          catch(err){
+              console.log("error",err);
+          }
          
       });
      return (
