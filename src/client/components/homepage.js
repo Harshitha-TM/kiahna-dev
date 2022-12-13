@@ -32,20 +32,6 @@ const homepage = (props) => {
                     .catch((err) => {
                         console.log(err.message);
                     });
-
-                // fetch(`${URL}image`, {
-                //     headers: {
-                //         "Content-Type": "application/json",
-                //         "Accept": "application/json",
-                //     },
-                //     method: 'POST',
-                //     mode: 'cors',
-                //     body: formData,
-                // })
-                //     .then((res) => res)
-                //     .catch((err) => {
-                //         console.log(err.message);
-                //     });
             }
             catch (err) {
                 console.log("error", err);
