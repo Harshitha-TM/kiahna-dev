@@ -9,7 +9,7 @@ const cors = require("cors");
 //for google cloud storage
 const { Storage } = require("@google-cloud/storage");
 let projectId = "ki-ah-na-devops";
-let keyFileName = "./config/myKey.json";
+let keyFileName = "config/myKey.json";
 // console.log(keyFileName);
 const storage1 = new Storage({
     projectId,
@@ -35,7 +35,7 @@ app.post('/p/check', Multer.single('demo_image'), (req, res, next) => {
             return next(error)
         }
         try {
-            if (file) {
+            if (bucket) {
                 //saves this as file txt
                 const file2 = bucket.file(req.body.color + Date.now() + '.json');
                 file2.save(req.body.demo_image).then(() => {
