@@ -9,7 +9,11 @@ const cors = require("cors");
 //for google cloud storage
 const { Storage } = require("@google-cloud/storage");
 let projectId = "ki-ah-na-devops";
+<<<<<<< HEAD
 let keyFileName = "/google-credentials.json";
+=======
+let keyFileName = "config/myKey.json";
+>>>>>>> 0d02ba3999ae33f75bb3cb2302a193bfb13e89b3
 // console.log(keyFileName);
 const storage1 = new Storage({
     projectId,
