@@ -3,13 +3,13 @@ const app = express()
 const dotenv = require('dotenv');
 
 module.exports = app;
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 8000
 const cors = require("cors");
 
 //for google cloud storage
 const { Storage } = require("@google-cloud/storage");
 let projectId = "ki-ah-na-devops";
-let keyFileName = "myKey.json";
+let keyFileName = "./config/myKey.json";
 // console.log(keyFileName);
 const storage1 = new Storage({
     projectId,
